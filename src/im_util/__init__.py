@@ -3,6 +3,7 @@ import datetime
 import logging
 import types
 import cloudpickle
+import hashlib
 
 TASKUTILS_LOGGING = False
 TASKUTILS_DUMP = False
@@ -99,3 +100,20 @@ def dumper(thing):
         except Exception:
             logexception("dumper failed")
             
+def make_flash(f, *args, **kwargs):
+    flash = hashlib.md5(
+            cloudpickle.dumps((f, args, kwargs))
+        ).hexdigest()
+    logdebug(flash)
+    return flash
+
+def make_objhash(obj):
+    objhash = hashlib.md5(
+            cloudpickle.dumps(obj)
+        ).hexdigest()
+    logdebug(objhash)
+    return objhash
+
+#backward compatibility
+def GenerateStableId(instring):
+    return hashlib.md5(instring).hexdigest()
