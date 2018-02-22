@@ -4,4 +4,4 @@ python:
 install:
   - sudo apt-get install twine
 script:
-  - scripts/makedish.sh
+  - scripts/makedist.sh
