@@ -8,7 +8,7 @@ except ImportError:
 
 dist = setup(
     name='im_util',
-    version='0.1.2',
+    version='0.1.3',
     description='Utilities for the im package library; used by most of them',
     author='Emlyn O\'Regan',
     author_email='emlynoregan@gmail.com',
