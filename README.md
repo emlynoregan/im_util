@@ -1,6 +1,8 @@
 # im_util
 This package contains miscellaneous utility functions for use by other im_* packages. 
 
+[![Build Status](https://travis-ci.org/emlynoregan/im_util.svg?branch=master)](https://travis-ci.org/emlynoregan/im_util)
+
 ## Install
 
 Use the python package for this library. You can find the package online [here](https://pypi.org/project/im-util/).
